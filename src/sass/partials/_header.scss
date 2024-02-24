@@ -1,0 +1,50 @@
+header {
+  .header-wrapper {
+    
+    position: relative;
+		height: 900px;
+    background: linear-gradient(to bottom, rgba(19, 19, 19, 0) 5%, rgba(19, 19, 19, 1)93%), url('/images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.header-title {
+	position: absolute;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+  h1 {
+		margin: 0;
+    letter-spacing: 110px;
+    font-size: 180px;
+		line-height: 40%;
+		font-weight: $font-black;
+
+		span {
+      font-size: 36px;
+      letter-spacing: 10px;
+			line-height: 0;
+    }
+  }
+}
+
+nav {
+	text-align: center;
+
+	.active {
+		color: $color-light;
+	}
+
+	a {
+		padding: 0 5% ;
+		text-decoration: none;
+		font-size: 20px;
+		color: $color-grey;
+		font-weight: $font-semibold;
+		font-size: 32px;
+	}
+}

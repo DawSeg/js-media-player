@@ -1,0 +1,116 @@
+.home-page {
+  text-align: center;
+}
+
+.player {
+  position: relative;
+
+  .details {
+    position: relative;
+    left: -12%;
+    transform: translate(50%);
+  }
+}
+
+.song-name {
+  font-size: 26px;
+  font-weight: $font-bold;
+  letter-spacing: 2px;
+}
+
+.song-details {
+  display: flex;
+  justify-content: space-between;
+  color: $color-grey;
+  font-size: 18px;
+  font-weight: $font-semibold;
+  width: 450px;
+
+  .song-ranking {
+    position: relative;
+    text-align: right;
+  }
+}
+
+.subscribe {
+  position: relative;
+  margin-top: 120px;
+
+  .subscribe-img {
+    overflow: hidden;
+  }
+
+  .subscribe-button {
+    cursor: pointer;
+    font-size: 48px;
+    font-weight: $font-bold;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    color: $color-light;
+    background-color: $color-red;
+    border: none;
+    padding: 40px 55px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 100px;
+    position: absolute;
+    top: -16%;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}
+
+.subscribe-button:hover {
+  background-color: $color-light;
+  color: $color-red;
+}
+
+.artist {
+
+  .artist-img {
+    position: absolute;
+    top: 18%;
+    right: 15%;
+  }
+
+  .artist-name {
+    font-size: 100px;
+    letter-spacing: 20px;
+    font-weight: $font-black;
+    position: absolute;
+    top: 35%;
+    left: 48%;
+    z-index: 1;
+    line-height: 10px;
+
+    span {
+      color: $color-red;
+    }
+
+    .artist-name-top {
+      position: relative;
+      left: -35%;
+    }
+  }
+
+  .artist-description {
+    font-weight: $font-semibold;
+    letter-spacing: 8px;
+    text-align: end;
+    font-size: 36px;
+    position: absolute;
+    bottom: 8%;
+    right: 13%;
+
+    span {
+      font-size: 36px;
+      color: $color-grey;
+      font-weight: $font-bold;
+    }
+  }
+}

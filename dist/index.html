@@ -20,36 +20,65 @@
 				<h1>TASTE<br><span>ENGAGE<br>IN<br>ART</span></h1>
 			</div>
 		</div>
-	<!--NAVIGATION-->
-	<nav>
-		<div class="nav-wrapper">
-			<a id="home" class="active" href="#home">HOME</a>
-			<a id="search" href="#search">search</a>
-			<a id="discover"	href="#discover">discover</a>
-		</div>
-	</nav>
-</header>
+		<!--NAVIGATION-->
+		<nav>
+			<div class="nav-wrapper">
+				<a id="home" class="active" href="#home">HOME</a>
+				<a id="search" href="#search">search</a>
+				<a id="discover" href="#discover">discover</a>
+			</div>
+		</nav>
+	</header>
 	<!--PAGES-->
 	<div class="pages" id="pages">
 		<!--PAGES/HOME-->
-		<script id="template-songs" type="text/x-handlebars-template">
+		<script id="template-home-page" type="text/x-handlebars-template">
 			<section class="home-page" id="home-page">
-				<div class="song-name">{{author}}{{title}}</div>
 				<div class="player">
-					<audio>
-						<source src="songs/" type="audio/mpeg">
-					</audio>
-				</div>
-				<div class="song-details">
-					<div class="song-categories"> 
-						<p>
-							categories:<span class="categories">{{categories}}</span>
-						</p>
+					<div class="song-name">{{author}}-{{title}}</div>
+					<div class="song-player">
+						<audio>
+							<source src="songs/{{filename}}" type="audio/mpeg">
+						</audio>
 					</div>
-					<div class="song-ranking">
-						<p>
-							#<span class="ranking">{{ranking}}</span>in the ranking	
-						</p>
+					<div class="details">
+						<div class="song-details">
+							<div class="song-categories">
+								<p class="categories">
+									categories: <span>{{categories}}</span>
+								</p>
+							</div>
+							<div class="song-ranking">
+								<p class="ranking">
+									#<span>{{ranking}}</span>in the ranking
+								</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div	class="subscribe">
+					<div class="subscribe-img">
+						<img src="./images/subscribe.jpg" alt="subscribe">
+					</div>
+					<h2>subscribe now</h2>
+					<a href="">
+						<button class="subscribe-button">Join now</button>
+					</a>
+					<div class="artist">
+						<div class="artist-name">
+							<div class="artist-name-top">
+								<p>Dean</p>
+							</div>
+							<div class="artist-name-bottom">
+								<p>Hen<span>son</span></p>
+							</div>
+						</div>
+						<div class="artist-img">
+							<img src="./images/artist.jpg" alt="">
+						</div>
+						<div class="artist-description">
+							<p><span>new album<br></span> available only for subscribers</p>
+						</div>
 					</div>
 				</div>
 			</section>

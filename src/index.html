@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<!--NAVIGATION-->
-		<nav>
+		<nav id="nav">
 			<div class="nav-wrapper">
 				<a id="home" class="active" href="#home">HOME</a>
 				<a id="search" href="#search">search</a>
@@ -85,7 +85,37 @@
 		</script>
 		<!--PAGES/SEARCH-->
 		<section class="search-page">
-
+			<h2>search</h2>
+			<div class="search-form">
+				<p>name</p>
+				<form>
+					<input type="text">
+				</form>
+				<button class="serach-button" type="submit">search</button>
+			</div>
+			<h3>we have found 3 songs...</h3>
+			<div class="player">
+				<div class="song-name">{{author}}-{{title}}</div>
+				<div class="song-player">
+					<audio>
+						<source src="songs/{{filename}}" type="audio/mpeg">
+					</audio>
+				</div>
+				<div class="details">
+					<div class="song-details">
+						<div class="song-categories">
+							<p class="categories">
+								categories: <span>{{categories}}</span>
+							</p>
+						</div>
+						<div class="song-ranking">
+							<p class="ranking">
+								#<span>{{ranking}}</span>in the ranking
+							</p>
+						</div>
+					</div>
+				</div>	
+			</div>
 		</section>
 	</div>
 		<!--FOOTER-->

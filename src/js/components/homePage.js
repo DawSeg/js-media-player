@@ -7,7 +7,7 @@ class HomePage {
 
     thisHomePage.render(element);
   }
-
+  
   render(element) {
     const thisHomePage = this;
 

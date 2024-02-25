@@ -3,8 +3,9 @@ import { select } from './settings';
 
 const app = {
   initHome: () => {
-    const homePage = document.querySelector(select.containerOf.homePage);
-    new HomePage(homePage);
+    const thisApp = this;
+    thisApp.homePage = document.querySelector(select.containerOf.homePage);
+    new HomePage(thisApp.homePage);
   },
 
   init: () => {
@@ -12,4 +13,5 @@ const app = {
     thisApp.initHome();
   }
 };
+
 app.init();

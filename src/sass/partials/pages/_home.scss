@@ -10,25 +10,25 @@
     left: -12%;
     transform: translate(50%);
   }
-}
 
-.song-name {
-  font-size: 26px;
-  font-weight: $font-bold;
-  letter-spacing: 2px;
-}
-
-.song-details {
-  display: flex;
-  justify-content: space-between;
-  color: $color-grey;
-  font-size: 18px;
-  font-weight: $font-semibold;
-  width: 450px;
-
-  .song-ranking {
-    position: relative;
-    text-align: right;
+  .song-name {
+    font-size: 26px;
+    font-weight: $font-bold;
+    letter-spacing: 2px;
+  }
+  
+  .song-details {
+    display: flex;
+    justify-content: space-between;
+    color: $color-grey;
+    font-size: 18px;
+    font-weight: $font-semibold;
+    width: 450px;
+  
+    .song-ranking {
+      position: relative;
+      text-align: right;
+    }
   }
 }
 

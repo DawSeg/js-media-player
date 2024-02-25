@@ -1,0 +1,48 @@
+.search-page {
+  text-align: center;
+
+  .search-page-header {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: $color-grey;
+    font-weight: $font-semibold;
+  }
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+
+    input {
+      margin: 0 32px;
+      height: 60px;
+      width: 340px;
+      border-radius: 15px;
+    }
+
+    .search-button {
+      color: $color-light;
+      height: 60px;
+      letter-spacing: 3px;
+      border: none;
+      background-color: $color-red;
+      border-radius: 10px;
+      font-size: 24px;
+      padding: 0 32px;
+    }
+
+    p {
+      position: relative;
+      bottom: 20px;
+      color: $color-grey;
+      font-size: 28px;
+      font-weight: $font-semibold;
+      letter-spacing: 2px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 72px;
+  }
+}

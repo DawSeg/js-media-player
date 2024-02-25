@@ -4,11 +4,13 @@
 
 .player {
   position: relative;
+  margin-bottom: 54px;
 
   .details {
     position: relative;
-    left: -12%;
-    transform: translate(50%);
+    max-width: 450px;
+    right: -50%;
+    transform: translate(-50%);
   }
 
   .song-name {
@@ -23,7 +25,7 @@
     color: $color-grey;
     font-size: 18px;
     font-weight: $font-semibold;
-    width: 450px;
+    max-width: 450px;
   
     .song-ranking {
       position: relative;
@@ -55,7 +57,7 @@
     border-radius: 10px;
   }
 
-  h2 {
+  .subscribe-header {
     font-size: 100px;
     position: absolute;
     top: -16%;

@@ -1,5 +1,5 @@
-import { templates } from '../settings';
-import utils from '../utils';
+import { templates } from '../settings.js';
+import utils from '../utils.js';
 
 class HomePage {
   constructor(element) {
@@ -13,9 +13,10 @@ class HomePage {
 
     const generatedHTML = templates.homePage();
     thisHomePage.dom = {};
-    thisHomePage.wrapper = element;
+    thisHomePage.dom.wrapper = element;
     thisHomePage.dom.wrapper.innerHTML = generatedHTML;
     thisHomePage.element = utils.createDOMFromHTML(generatedHTML);
+
   }
 }
 

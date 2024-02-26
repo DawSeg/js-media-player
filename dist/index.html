@@ -30,15 +30,25 @@
 		</nav>
 	</header>
 	<!--PAGES-->
-	<div class="pages" id="pages">
+	<div id="pages">
+		<section id="home">
+			<div id="home" class="home-page-wrapper "></div>
+		</section>
+		<section id="search">
+			<div id="search" class="search-wrapper"></div>
+		</section>
+		<section id="discover">
+			<div id="discover" class="discover-wrapper"></div>
+		</section>
+	</div>
 		<!--PAGES/HOME-->
-		<script id="home-page" type="text/x-handlebars-template">
-			<section class="home-page" id="home-page">
+		<script id="template-home-page" type="text/x-handlebars-template">
+			<div class="home-page" id="home-page">
 				<div class="player">
 					<div class="song-name">{{author}}-{{title}}</div>
 					<div class="song-player">
 						<audio>
-							<source src="songs/{{filename}}" type="audio/mpeg">
+							<source src="{{filename}}" type="audio/mpeg">
 						</audio>
 					</div>
 					<div class="details">
@@ -81,11 +91,11 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</script>
 		<!--PAGES/SEARCH-->
-		<script id="search-page" type="text/x-handlebars-template">
-			<section class="search-page">
+		<script id="template-home-page" type="text/x-handlebars-template">
+			<div class="search-page">
 				<h2 class="search-page-header">Search</h2>
 				<div class="search-form">
 					<p>Name</p>
@@ -99,7 +109,7 @@
 					<div class="song-name">{{author}}-{{title}}</div>
 					<div class="song-player">
 						<audio>
-							<source src="songs/{{filename}}" type="audio/mpeg">
+							<source src="{{filename}}" type="audio/mpeg">
 						</audio>
 					</div>
 					<div class="details">
@@ -117,7 +127,7 @@
 						</div>
 					</div>	
 				</div>
-			</section>
+			</div>
 		</script>
 	</div>
 	<!--FOOTER-->

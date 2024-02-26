@@ -1,14 +1,14 @@
-import HomePage from './components/homePage';
-import { select } from './settings';
+import HomePage from './components/homePage.js';
+import { select } from './settings.js';
 
 const app = {
-  initHome: () => {
+  initHome: function () {
     const thisApp = this;
     thisApp.homePage = document.querySelector(select.containerOf.homePage);
     new HomePage(thisApp.homePage);
   },
 
-  init: () => {
+  init: function () {
     const thisApp = this;
     thisApp.initHome();
   }

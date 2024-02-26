@@ -1,9 +1,9 @@
 export const select = {
   templateOf: {
-    homePage: '#home-page',
+    homePage: '#template-home-page',
   },
   containerOf: {
-    homePage: '.home-page'
+    homePage: '.home-page-wrapper'
   }
 };
 

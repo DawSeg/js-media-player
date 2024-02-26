@@ -18,3 +18,11 @@ body {
   margin: 0 auto;
   padding: 0;
 }
+
+#pages > * {
+  display: none;
+}
+
+#pages > .active {
+  display: block;
+}

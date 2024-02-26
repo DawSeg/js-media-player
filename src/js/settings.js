@@ -7,7 +7,7 @@ export const select = {
   containerOf: {
     homePage: '.home-page-wrapper',
     searchPage: '.search-page-wrapper',
-    discover: '.discover-page-wrapper',
+    discoverPage: '.discover-page-wrapper',
     pages: '#pages',
   },
   classNames: {

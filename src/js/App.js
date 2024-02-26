@@ -1,5 +1,6 @@
 import HomePage from './components/homePage.js';
 import SearchPage from './components/searchPage.js';
+import DiscoverPage from './components/discoverPage.js';
 import { select, settings } from './settings.js';
 
 const app = {
@@ -58,6 +59,12 @@ const app = {
     new SearchPage(thisApp.searchPage);
   },
 
+  initDiscover: function () {
+    const thisApp = this;
+    thisApp.discoverPage = document.querySelector(select.containerOf.discoverPage);
+    new DiscoverPage(thisApp.discoverPage);
+  },
+
   initData: function () {
     const thisApp = this;
     const url = settings.db.url + '/' + settings.db.songs;
@@ -74,6 +81,7 @@ const app = {
     const thisApp = this;
     thisApp.initHome();
     thisApp.initSearch();
+    thisApp.initDiscover();
     thisApp.initData();
     thisApp.initPages();
   }

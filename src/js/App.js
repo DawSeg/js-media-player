@@ -1,4 +1,5 @@
 import HomePage from './components/homePage.js';
+import SearchPage from './components/searchPage.js';
 import { select, settings } from './settings.js';
 
 const app = {
@@ -15,7 +16,7 @@ const app = {
         break;
       }
     }
-    
+
     thisApp.activatePage(pageMatchingHash);
 
     for (let link of thisApp.navLinks) {
@@ -51,6 +52,12 @@ const app = {
     new HomePage(thisApp.homePage);
   },
 
+  initSearch: function () {
+    const thisApp = this;
+    thisApp.searchPage = document.querySelector(select.containerOf.searchPage);
+    new SearchPage(thisApp.searchPage);
+  },
+
   initData: function () {
     const thisApp = this;
     const url = settings.db.url + '/' + settings.db.songs;
@@ -66,6 +73,7 @@ const app = {
   init: function () {
     const thisApp = this;
     thisApp.initHome();
+    thisApp.initSearch();
     thisApp.initData();
     thisApp.initPages();
   }

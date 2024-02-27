@@ -27,12 +27,8 @@ const app = {
         const id = clickedElement.getAttribute('href').replace('#', '');
         thisApp.activatePage(id);
         window.location.hash = '#/' + id;
-        //window.scrollTo(0, 0);
       });
     }
-    // window.addEventListener('scroll', function(event) {
-    //  event.preventDefault();
-    // }, { passive: false });
   },
 
   activatePage: function (pageId) {
@@ -45,7 +41,6 @@ const app = {
         link.getAttribute('href') == '#' + pageId);
     }
   },
-
 
   initHome: function () {
     const thisApp = this;
@@ -73,8 +68,15 @@ const app = {
       .then(rawResponse => rawResponse.json())
       .then(parsedResponse => {
         thisApp.data = parsedResponse;
-        console.log(parsedResponse);
       });
+  },
+
+  initAudioPlayer: function () {
+    // eslint-disable-next-line no-undef
+    GreenAudioPlayer.init({
+      selector: '.player', // inits Green Audio Player on each audio container that has class "player"
+      stopOthersOnPlay: true
+    });
   },
 
   init: function () {
@@ -84,6 +86,7 @@ const app = {
     thisApp.initDiscover();
     thisApp.initData();
     thisApp.initPages();
+    this.initAudioPlayer();
   }
 };
 

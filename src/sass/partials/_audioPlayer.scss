@@ -1,0 +1,62 @@
+.player {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 180px;
+  margin-bottom: 200px;
+}
+
+.details {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: $color-grey;
+  font-size: 19px;
+  font-weight: $font-semibold;
+  width: 550px;
+}
+
+.song-categories {
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: absolute;
+  top: -50%;
+  left: 3%;
+  transform: translateY(60%);
+}
+
+.song-ranking {
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: absolute;
+  top: -50%;
+  right: 3%;
+  transform: translateY(60%);
+  white-space: nowrap;
+}
+
+.song-name {
+  position: absolute;
+  top: -110%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: $font-semibold;
+  letter-spacing: 2px;
+}
+
+.green-audio-player {
+
+  width: 550px !important;
+  height: 70px !important;
+
+  .progress__pin {
+    background-color: $color-red !important;
+  }
+
+  .slider {
+    width: 320px;
+  }
+}

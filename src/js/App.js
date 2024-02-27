@@ -2,6 +2,7 @@ import HomePage from './components/homePage.js';
 import SearchPage from './components/searchPage.js';
 import DiscoverPage from './components/discoverPage.js';
 import { select, settings } from './settings.js';
+import AudioPlayer from './components/audioPlayer.js';
 
 const app = {
   initPages: function () {
@@ -60,6 +61,16 @@ const app = {
     new DiscoverPage(thisApp.discoverPage);
   },
 
+  initPlaylist: function () {
+    const thisApp = this;
+    for(let songData in thisApp.data) {
+      new AudioPlayer (
+        thisApp.data[songData].id,
+        thisApp.data[songData]
+      );
+    }
+  },
+
   initData: function () {
     const thisApp = this;
     const url = settings.db.url + '/' + settings.db.songs;
@@ -68,6 +79,7 @@ const app = {
       .then(rawResponse => rawResponse.json())
       .then(parsedResponse => {
         thisApp.data = parsedResponse;
+        thisApp.initPlaylist();
       });
   },
 
@@ -86,7 +98,7 @@ const app = {
     thisApp.initDiscover();
     thisApp.initData();
     thisApp.initPages();
-    this.initAudioPlayer();
+    thisApp.initAudioPlayer();
   }
 };
 

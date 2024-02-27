@@ -3,12 +3,14 @@ export const select = {
     homePage: '#template-home-page',
     searchPage: '#template-search-page',
     discoverPage: '#template-discover-page',
+    AudioPlayer: '#template-audio-player',
   },
   containerOf: {
     homePage: '.home-page-wrapper',
     searchPage: '.search-page-wrapper',
     discoverPage: '.discover-page-wrapper',
     pages: '#pages',
+    playList: '.play-list',
   },
   classNames: {
     active: 'active',
@@ -25,6 +27,8 @@ export const templates = {
     document.querySelector(select.templateOf.homePage).innerHTML),
   discoverPage: Handlebars.compile(
     document.querySelector(select.templateOf.discoverPage).innerHTML),
+  audioPlayer: Handlebars.compile(
+    document.querySelector(select.templateOf.AudioPlayer).innerHTML)
 };
 
 export const settings = {

@@ -23,6 +23,11 @@
     border: none;
     padding: 40px 55px;
     border-radius: 10px;
+
+    &:hover {
+      background-color: $color-light;
+      color: $color-red;
+    }
   }
 
   .subscribe-header {
@@ -33,11 +38,6 @@
     transform: translateX(-50%);
 
   }
-}
-
-.subscribe-button:hover {
-  background-color: $color-light;
-  color: $color-red;
 }
 
 .artist {
@@ -82,4 +82,10 @@
       font-weight: $font-bold;
     }
   }
+}
+
+.play-list {
+  position: relative;
+  top: 150%;
+  display: block;
 }

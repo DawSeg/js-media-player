@@ -44,24 +44,7 @@
 	<!--PAGES/HOME-->
 	<script id="template-home-page" type="text/x-handlebars-template">
 			<div class="home-page" id="home-page">
-				<div class="player">
-					<div class="song-name">{{author}}John DOe - Where diodi my love go{{title}}</div>
-						<audio>
-							<source src="songs/{{filename}}" type="audio/mpeg">
-						</audio>
-						<div class="details">
-							<div class="song-categories">
-								<p class="categories">
-									categories: <span>{{categories}}</span>
-								</p>
-							</div>
-							<div class="song-ranking">
-								<p class="ranking">
-									#<span>{{ranking}}</span>in the ranking
-								</p>
-							</div>
-					</div>	
-				</div>
+				<div class="play-list"></div>
 				<div class="subscribe">
 					<div class="subscribe-img">
 						<img src="./images/subscribe.jpg" alt="subscribe">
@@ -80,7 +63,7 @@
 							</div>
 						</div>
 						<div class="artist-img">
-							<img src="./images/artist.jpg" alt="">
+							<img src="./images/artist.jpg" alt="artist">
 						</div>
 						<div class="artist-description">
 							<p><span>new album<br></span> available only for subscribers</p>
@@ -101,28 +84,6 @@
 					<button class="search-button" type="submit">Search</button>
 				</div>
 				<h3>we have found 3 songs...</h3>
-				<div class="player">
-					<div class="song-name">{{author}}-{{title}}</div>
-					<div class="song-player">
-						<audio>
-							<source src="songs/{{filename}}" type="audio/mpeg">
-						</audio>
-					</div>
-					<div class="details">
-						<div class="song-details">
-							<div class="song-categories">
-								<p class="categories">
-									categories: <span>{{categories}}</span>
-								</p>
-							</div>
-							<div class="song-ranking">
-								<p class="ranking">
-									#<span>{{ranking}}</span>in the ranking
-								</p>
-							</div>
-						</div>
-					</div>	
-				</div>
 			</div>
 		</script>
 	<!--PAGES/DISCOVER-->
@@ -130,34 +91,33 @@
 			<div class="discover-page">
 				<h2 class="discover-page-header">discover</h2>
 				<h3>give it a try!</h3>
-				<div class="player">
-					<div class="song-name">{{author}}-{{title}}</div>
-					<div class="song-player">
-						<audio>
-							<source src="songs/{{filename}}" type="audio/mpeg">
-						</audio>
-					</div>
-					<div class="details">
-						<div class="song-details">
-							<div class="song-categories">
-								<p class="categories">
-									categories: <span>{{categories}}</span>
-								</p>
-							</div>
-							<div class="song-ranking">
-								<p class="ranking">
-									#<span>{{ranking}}</span>in the ranking
-								</p>
-							</div>
-						</div>
-					</div>	
-				</div>
 			</div>
 		</script>
 	<!--FOOTER-->
 	<section class="footer">
 		All rights reserved
 	</section>
+	<!--AUDIO-PLAYER-->
+	<script id="template-audio-player" type="text/x-handlebars-template">
+		<div class="player">
+			<div class="song-name">{{author}}-{{title}}</div>
+				<audio>
+				<source src="songs/{{filename}}" type="audio/mpeg">
+				</audio>
+			<div class="details">
+				<div class="song-categories">
+					<p class="categories">
+						categories: <span>{{categories}}</span>
+					</p>
+				</div>
+				<div class="song-ranking">
+					<p class="ranking">
+						#<span>{{ranking}}</span>in the ranking
+					</p>
+				</div>
+			</div>
+		</div>
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
 	<script src="vendor/green-audio-player.min.js"></script>
 	<script src="js/app.js" type="module"></script>

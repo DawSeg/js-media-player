@@ -10,7 +10,7 @@ export const select = {
     searchPage: '.search-page-wrapper',
     discoverPage: '.discover-page-wrapper',
     pages: '#pages',
-    playList: '.play-list',
+    playList: '.home-play-list, .random-song',
   },
   classNames: {
     active: 'active',

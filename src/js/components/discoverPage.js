@@ -5,9 +5,11 @@ import AudioPlayer from './audioPlayer.js';
 class DiscoverPage {
   constructor(element, data) {
     const thisDiscoverPage = this;
+    thisDiscoverPage.audioPlayer = null;
     thisDiscoverPage.randomSong = null;
     thisDiscoverPage.render(element);
     thisDiscoverPage.getRandomSong(data);
+    thisDiscoverPage.initAudioPlayer();
   }
 
   render(element) {
@@ -26,20 +28,21 @@ class DiscoverPage {
     discoverLink.addEventListener('click', () => {
       const randomIndex = Math.floor(Math.random() * thisDiscoverPage.data.length);
       thisDiscoverPage.randomSong = thisDiscoverPage.data[randomIndex];
+      console.log(thisDiscoverPage.randomSong);
+    //  if (thisDiscoverPage.randomSong) {
+    //    thisDiscoverPage.audioPlayer.update(thisDiscoverPage.randomSong);
+    //  } else {
+    //    console.error('Random song not selected yet.');
+    //  }
     });
   }
 
-  initPlayer() {
+  initAudioPlayer() {
     const thisDiscoverPage = this;
     // eslint-disable-next-line no-undef
     new GreenAudioPlayer('.random-song');
-  }
-
-  initPlaylist () {
-    const thisDiscoverPage = this;
-   
-    new AudioPlayer(thisDiscoverPage.randomSong.id, thisDiscoverPage.data );
-    thisDiscoverPage.initPlayer();
+    thisDiscoverPage.audioPlayer = new AudioPlayer(
+      thisDiscoverPage.randomSong.id, thisDiscoverPage.randomSong);
   }
 }
 

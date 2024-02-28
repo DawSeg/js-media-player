@@ -9,12 +9,14 @@ class AudioPlayer {
     thisAudioPlayer.renderPlayList();
   }
 
-  renderPlayList () {
+  renderPlayList() {
     const thisAudioPlayer = this;
     const generatedHTML = templates.audioPlayer(thisAudioPlayer.data);
     thisAudioPlayer.element = utils.createDOMFromHTML(generatedHTML);
-    const playListContainer = document.querySelector(select.containerOf.playList);
-    playListContainer.appendChild(thisAudioPlayer.element);
+    const playListContainers = document.querySelectorAll(select.containerOf.playList);
+    for (let container of playListContainers) {
+      container.appendChild(thisAudioPlayer.element);
+    }
   }
 }
 

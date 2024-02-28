@@ -76,8 +76,8 @@ const app = {
         thisApp.data[songData].id,
         thisApp.data[songData]
       );
-      thisApp.initAudioPlayer();
     }
+    thisApp.initAudioPlayer();
   },
 
   initData: function () {

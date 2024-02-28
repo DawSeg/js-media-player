@@ -60,20 +60,15 @@
     }
   }
 
-  .volume {
-
-    .volume__button {
-
-      &.open {
-
-        path {
-          fill: $color-red !important;
-        }
+  .volume__button {
+    &.open {
+      path {
+        fill: $color-red !important;
       }
     }
+  }
 
-    .volume__pin {
-      background-color: $color-red !important;
-    }
+  .volume__pin {
+    background-color: $color-red !important;
   }
 }

@@ -1,12 +1,13 @@
 import { select, templates } from '../settings.js';
 import utils from '../utils.js';
+import AudioPlayer from './audioPlayer.js';
 
 class DiscoverPage {
   constructor(element, data) {
     const thisDiscoverPage = this;
+    thisDiscoverPage.randomSong = null;
     thisDiscoverPage.render(element);
-    thisDiscoverPage.randomSong(data);
-    thisDiscoverPage.renderRandomSong();
+    thisDiscoverPage.getRandomSong(data);
   }
 
   render(element) {
@@ -18,22 +19,28 @@ class DiscoverPage {
     thisDiscoverPage.element = utils.createDOMFromHTML(generatedHTML);
   }
 
-  randomSong(data) {
+  getRandomSong(data) {
     const thisDiscoverPage = this;
     thisDiscoverPage.data = data;
     const discoverLink = document.querySelector(select.nav.discoverLink);
     discoverLink.addEventListener('click', () => {
       const randomIndex = Math.floor(Math.random() * thisDiscoverPage.data.length);
-      const randomSong = thisDiscoverPage.data[randomIndex];
-      console.log(randomSong);
+      thisDiscoverPage.randomSong = thisDiscoverPage.data[randomIndex];
     });
   }
 
-  renderRandomSong() {
+  initPlayer() {
     const thisDiscoverPage = this;
+    // eslint-disable-next-line no-undef
     new GreenAudioPlayer('.random-song');
   }
-}
 
+  initPlaylist () {
+    const thisDiscoverPage = this;
+   
+    new AudioPlayer(thisDiscoverPage.randomSong.id, thisDiscoverPage.data );
+    thisDiscoverPage.initPlayer();
+  }
+}
 
 export default DiscoverPage;

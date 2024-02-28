@@ -58,14 +58,13 @@ const app = {
   initDiscover: function () {
     const thisApp = this;
     thisApp.discoverPage = document.querySelector(select.containerOf.discoverPage);
-    new DiscoverPage(thisApp.discoverPage);
+    new DiscoverPage(thisApp.discoverPage, thisApp.data);
   },
 
   initAudioPlayer: function () {
-    const thisApp = this;
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
-      selector: '.player', // inits Green Audio Player on each audio container that has class "player"
+      selector: '.player',
       stopOthersOnPlay: true
     });
   },
@@ -84,12 +83,13 @@ const app = {
   initData: function () {
     const thisApp = this;
     const url = settings.db.url + '/' + settings.db.songs;
-    thisApp.data = {};
+    thisApp.data = [];
     fetch(url)
       .then(rawResponse => rawResponse.json())
       .then(parsedResponse => {
         thisApp.data = parsedResponse;
         thisApp.initPlaylist();
+        thisApp.initDiscover();
       });
   },
 
@@ -97,7 +97,6 @@ const app = {
     const thisApp = this;
     thisApp.initHome();
     thisApp.initSearch();
-    thisApp.initDiscover();
     thisApp.initData();
     thisApp.initPages();
   }

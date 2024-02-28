@@ -16,7 +16,8 @@ export const select = {
     active: 'active',
   },
   nav: {
-    links: '.nav-wrapper a'
+    links: '.nav-wrapper a',
+    discoverLink: '#discover-link',
   }
 };
 

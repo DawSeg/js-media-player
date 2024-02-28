@@ -7,10 +7,10 @@
 }
 
 .details {
-
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  position: relative;
+  text-align: center;
+  top: 110%;
+  left: -85%;
   color: $color-grey;
   font-size: 19px;
   font-weight: $font-semibold;
@@ -18,21 +18,18 @@
 }
 
 .song-categories {
+  position: absolute;
+  left: -50%;
   font-weight: 400;
   letter-spacing: 2px;
-
-  top: -50%;
-  left: 3%;
-  transform: translateY(60%);
+  white-space: nowrap;
 }
 
 .song-ranking {
+  position: relative;
+  right: -150%;
   font-weight: 400;
   letter-spacing: 2px;
-  position: absolute;
-  top: -50%;
-  right: 3%;
-  transform: translateY(60%);
   white-space: nowrap;
 }
 
@@ -48,15 +45,35 @@
 }
 
 .green-audio-player {
-
   width: 550px !important;
   height: 70px !important;
 
-  .progress__pin {
-    background-color: $color-red !important;
-  }
-
   .slider {
     width: 320px;
+
+    .gap-progress {
+      background-color: $color-red !important;
+    }
+
+    .progress__pin {
+      background-color: $color-red !important;
+    }
+  }
+
+  .volume {
+
+    .volume__button {
+
+      &.open {
+
+        path {
+          fill: $color-red !important;
+        }
+      }
+    }
+
+    .volume__pin {
+      background-color: $color-red !important;
+    }
   }
 }

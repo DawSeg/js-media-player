@@ -61,6 +61,15 @@ const app = {
     new DiscoverPage(thisApp.discoverPage);
   },
 
+  initAudioPlayer: function () {
+    const thisApp = this;
+    // eslint-disable-next-line no-undef
+    GreenAudioPlayer.init({
+      selector: '.player', // inits Green Audio Player on each audio container that has class "player"
+      stopOthersOnPlay: true
+    });
+  },
+
   initPlaylist: function () {
     const thisApp = this;
     for(let songData in thisApp.data) {
@@ -68,6 +77,7 @@ const app = {
         thisApp.data[songData].id,
         thisApp.data[songData]
       );
+      thisApp.initAudioPlayer();
     }
   },
 
@@ -83,14 +93,6 @@ const app = {
       });
   },
 
-  initAudioPlayer: function () {
-    // eslint-disable-next-line no-undef
-    GreenAudioPlayer.init({
-      selector: '.player', // inits Green Audio Player on each audio container that has class "player"
-      stopOthersOnPlay: true
-    });
-  },
-
   init: function () {
     const thisApp = this;
     thisApp.initHome();
@@ -98,7 +100,6 @@ const app = {
     thisApp.initDiscover();
     thisApp.initData();
     thisApp.initPages();
-    thisApp.initAudioPlayer();
   }
 };
 

@@ -15,8 +15,13 @@ export const select = {
       wrapper: '.search-page-wrapper',
       formInput: '.search-form form input',
       button: '.search-button',
+      header: '.search-page h3',
     },
-    playList: '.home-play-list, .random-song',
+    playList: {
+      home:'.home-play-list',
+      search: '.search-song',
+      discover: '.random-song',
+    }
   },
   classNames: {
     active: 'active',

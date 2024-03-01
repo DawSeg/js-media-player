@@ -15,10 +15,8 @@ class AudioPlayer {
     
     const generatedHTML = templates.audioPlayer(thisAudioPlayer.data);
     thisAudioPlayer.element = utils.createDOMFromHTML(generatedHTML);
-    const playListContainers = document.querySelectorAll(select.containerOf.playList);
-    for (let container of playListContainers) {
-      container.appendChild(thisAudioPlayer.element);
-    }
+    const playListContainer = document.querySelector(select.containerOf.playList.home);
+    playListContainer.appendChild(thisAudioPlayer.element);
   }
 }
 

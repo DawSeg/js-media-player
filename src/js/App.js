@@ -7,6 +7,7 @@ import AudioPlayer from './components/audioPlayer.js';
 const app = {
   initPages: function () {
     const thisApp = this;
+
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
     const idFromhash = window.location.hash.replace('#/', '');
@@ -34,6 +35,7 @@ const app = {
 
   activatePage: function (pageId) {
     const thisApp = this;
+    
     for (let page of thisApp.pages) {
       page.classList.toggle(select.classNames.active, page.id == pageId);
     }
@@ -45,18 +47,21 @@ const app = {
 
   initHome: function () {
     const thisApp = this;
+
     thisApp.homePage = document.querySelector(select.containerOf.homePage);
     new HomePage(thisApp.homePage);
   },
 
   initSearch: function () {
     const thisApp = this;
-    thisApp.searchPage = document.querySelector(select.containerOf.searchPage);
-    new SearchPage(thisApp.searchPage);
+
+    thisApp.searchPage = document.querySelector(select.containerOf.searchPage.wrapper);
+    new SearchPage(thisApp.searchPage, thisApp.data);
   },
 
   initDiscover: function () {
     const thisApp = this;
+
     thisApp.discoverPage = document.querySelector(select.containerOf.discoverPage);
     new DiscoverPage(thisApp.discoverPage, thisApp.data);
   },
@@ -71,6 +76,7 @@ const app = {
 
   initPlaylist: function () {
     const thisApp = this;
+
     for(let songData in thisApp.data) {
       new AudioPlayer (
         thisApp.data[songData].id,
@@ -82,6 +88,7 @@ const app = {
 
   initData: function () {
     const thisApp = this;
+
     const url = settings.db.url + '/' + settings.db.songs;
     thisApp.data = [];
     fetch(url)
@@ -89,14 +96,15 @@ const app = {
       .then(parsedResponse => {
         thisApp.data = parsedResponse;
         thisApp.initPlaylist();
+        thisApp.initSearch();
         thisApp.initDiscover();
       });
   },
 
   init: function () {
     const thisApp = this;
+
     thisApp.initHome();
-    thisApp.initSearch();
     thisApp.initData();
     thisApp.initPages();
   }

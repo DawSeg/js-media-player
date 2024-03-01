@@ -5,11 +5,17 @@ export const select = {
     discoverPage: '#template-discover-page',
     AudioPlayer: '#template-audio-player',
   },
+  
   containerOf: {
-    homePage: '.home-page-wrapper',
-    searchPage: '.search-page-wrapper',
-    discoverPage: '.discover-page-wrapper',
     pages: '#pages',
+    homePage: '.home-page-wrapper',
+    discoverPage: '.discover-page-wrapper',
+    searchPage: {
+      form: '.search-form form',
+      wrapper: '.search-page-wrapper',
+      formInput: '.search-form form input',
+      button: '.search-button',
+    },
     playList: '.home-play-list, .random-song',
   },
   classNames: {

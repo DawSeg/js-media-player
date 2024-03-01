@@ -14,7 +14,6 @@ export const select = {
       form: '.search-form form',
       wrapper: '.search-page-wrapper',
       formInput: '.search-form form input',
-      button: '.search-button',
       header: '.search-page h3',
     },
     playList: {

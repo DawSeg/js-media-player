@@ -11,7 +11,7 @@ class DiscoverPage {
     thisDiscoverPage.randomSong = null;
     thisDiscoverPage.render(element);
     thisDiscoverPage.getRandomSong();
-    thisDiscoverPage.initAudioPlayer();
+
   }
 
   render(element) {
@@ -31,13 +31,16 @@ class DiscoverPage {
     discoverLink.addEventListener('click', () => {
       const randomIndex = Math.floor(Math.random() * thisDiscoverPage.data.length);
       thisDiscoverPage.randomSong = thisDiscoverPage.data[randomIndex];
+      console.log(thisDiscoverPage.randomSong);
       if (thisDiscoverPage.randomSong) {
         console.log(thisDiscoverPage.randomSong);
         thisDiscoverPage.audioPlayer.update(thisDiscoverPage.randomSong);
       } else {
         console.error('Random song not selected yet.');
       }
+      thisDiscoverPage.initAudioPlayer();
     });
+
   }
 
   initAudioPlayer() {

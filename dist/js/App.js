@@ -3,6 +3,7 @@ import SearchPage from './components/searchPage.js';
 import DiscoverPage from './components/discoverPage.js';
 import { select, settings } from './settings.js';
 import AudioPlayer from './components/audioPlayer.js';
+import JoinPage from './components/joinPage.js';
 
 const app = {
   initPages: function () {
@@ -31,7 +32,16 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
+
+    const joinLink = document.querySelector(select.nav.joinLink);
+    joinLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = joinLink.getAttribute('href').replace('#', '');
+      thisApp.activatePage(id);
+      window.location.hash = '#/' + id;
+    });
   },
+  
 
   activatePage: function (pageId) {
     const thisApp = this;
@@ -64,6 +74,13 @@ const app = {
 
     thisApp.discoverPage = document.querySelector(select.containerOf.discoverPage);
     new DiscoverPage(thisApp.discoverPage, thisApp.data);
+  },
+
+  initJoin: function () {
+    const thisApp = this;
+
+    thisApp.joinPage = document.querySelector(select.containerOf.joinPage);
+    new JoinPage(thisApp.joinPage);
   },
 
   initAudioPlayer: function () {
@@ -107,6 +124,7 @@ const app = {
     thisApp.initHome();
     thisApp.initData();
     thisApp.initPages();
+    thisApp.initJoin();
   }
 };
 

@@ -3,6 +3,7 @@ export const select = {
     homePage: '#template-home-page',
     searchPage: '#template-search-page',
     discoverPage: '#template-discover-page',
+    joinPage: '#template-join-page',
     AudioPlayer: '#template-audio-player',
   },
   
@@ -16,6 +17,7 @@ export const select = {
       formInput: '.search-form form input',
       header: '.search-page h3',
     },
+    joinPage: '.join-page-wrapper',
     playList: {
       home:'.home-play-list',
       search: '.search-song',
@@ -27,6 +29,7 @@ export const select = {
   },
   nav: {
     links: '.nav-wrapper a',
+    joinLink: '.join-link',
     discoverLink: '#discover-link',
   }
 };
@@ -38,6 +41,8 @@ export const templates = {
     document.querySelector(select.templateOf.homePage).innerHTML),
   discoverPage: Handlebars.compile(
     document.querySelector(select.templateOf.discoverPage).innerHTML),
+  joinPage: Handlebars.compile(
+    document.querySelector(select.templateOf.joinPage).innerHTML),
   audioPlayer: Handlebars.compile(
     document.querySelector(select.templateOf.AudioPlayer).innerHTML)
 };

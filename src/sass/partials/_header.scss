@@ -54,3 +54,24 @@ nav {
   }
 }
 
+
+@media (max-width: 768px) {
+  .header-title {
+      
+    h1 {
+      margin: 0;
+      letter-spacing: 110px;
+      font-size: 180px;
+      line-height: 50%;
+      font-weight: $font-black;
+      display: none;
+  
+      span {
+        font-size: 36px;
+        letter-spacing: 10px;
+        line-height: 0;
+      }
+    }
+  }
+
+}

@@ -14,7 +14,6 @@ class JoinPage {
     const generatedHTML = templates.joinPage();
     thisJoinPage.dom = {};
     thisJoinPage.dom.wrapper = element;
-    console.log(element);
     thisJoinPage.dom.wrapper.innerHTML = generatedHTML;
     thisJoinPage.element = utils.createDOMFromHTML(generatedHTML);
   }

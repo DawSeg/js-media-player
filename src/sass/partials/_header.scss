@@ -62,9 +62,14 @@ nav {
       height: 500px;
     }
 
-    .nav-wrapper a{
-      font-size: 26px;
+    nav {
+      margin-bottom: 30px;
+
+      .nav-wrapper a {
+        font-size: 26px;
+      }
     }
+    
   }
 
   .header-title {

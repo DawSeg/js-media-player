@@ -55,7 +55,7 @@ nav {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     .header-wrapper {
       position: relative;
@@ -66,7 +66,7 @@ nav {
       margin-bottom: 30px;
 
       .nav-wrapper a {
-        font-size: 26px;
+        font-size: 21px;
       }
     }
     
@@ -74,12 +74,14 @@ nav {
 
   .header-title {
     h1 {
-      letter-spacing: 30px;
+      letter-spacing: 28px;
       font-size: 75px;
       line-height: 50%;
       font-weight: $font-black;
 
       span {
+        position: relative;
+        left: -2%;
         font-size: 21px;
         letter-spacing: 10px;
         line-height: 0;
@@ -90,12 +92,11 @@ nav {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .header-title {
-
+    
     h1 {
-      font-size: 160px;
+      font-size: 140px;
       position: relative;
-      left: 2%;
-      letter-spacing: 95px;
+      letter-spacing: 75px;
 
       span {
         position: relative;

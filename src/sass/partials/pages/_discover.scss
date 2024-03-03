@@ -22,3 +22,23 @@
     margin-bottom: 200px;
   }
 }
+
+@media (max-width: 768px) {
+  .discover-page {
+   position: relative;
+
+   .green-audio-player {
+    margin: 0 0 120px 0;
+   }
+    .discover-page-header {
+      font-size: 36px;
+      letter-spacing: 6px;
+      margin: 20px;
+    }
+
+    h3 {
+      font-size: 21px;
+    }
+  }
+  
+}

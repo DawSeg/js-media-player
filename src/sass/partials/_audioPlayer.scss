@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%);
   margin-top: 180px;
-  margin-bottom: 200px;
+  margin-bottom: 215px;
 
   .slider {
     width: 320px;
@@ -105,16 +105,8 @@
       width: 135px !important;
     }
 
-   .controls {
-    .controls__total-time {
-      display: none;
+    .volume {
+      display: none !important;
     }
-   }
-
-   .volume {
-    display: block !important;
   }
-  }
-
-  
 }

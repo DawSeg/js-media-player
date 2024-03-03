@@ -13,17 +13,18 @@ header {
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 50%;
+  left: 52%;
   transform: translate(-50%, -50%);
 
   h1 {
-    margin: 0;
     letter-spacing: 110px;
     font-size: 180px;
     line-height: 50%;
     font-weight: $font-black;
 
     span {
+      position: relative;
+      left: -5%;
       font-size: 36px;
       letter-spacing: 10px;
       line-height: 0;
@@ -54,24 +55,47 @@ nav {
   }
 }
 
+@media (max-width: 767px) {
+  header {
+    .header-wrapper {
+      position: relative;
+      height: 500px;
+    }
 
-@media (max-width: 768px) {
+    .nav-wrapper a{
+      font-size: 26px;
+    }
+  }
+
   .header-title {
-      
     h1 {
-      margin: 0;
-      letter-spacing: 110px;
-      font-size: 180px;
+      letter-spacing: 30px;
+      font-size: 75px;
       line-height: 50%;
       font-weight: $font-black;
-      display: none;
-  
+
       span {
-        font-size: 36px;
+        font-size: 21px;
         letter-spacing: 10px;
         line-height: 0;
       }
     }
   }
-
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-title {
+
+    h1 {
+      font-size: 160px;
+      position: relative;
+      left: 2%;
+      letter-spacing: 95px;
+
+      span {
+        position: relative;
+        left: -5%;
+      }
+    }
+  }
+} 

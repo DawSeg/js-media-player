@@ -22,7 +22,7 @@ export const select = {
       home:'.home-play-list',
       search: '.search-song',
       discover: '.random-song',
-    }
+    },
   },
   classNames: {
     active: 'active',

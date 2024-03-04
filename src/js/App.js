@@ -93,11 +93,18 @@ const app = {
 
   initPlaylist: function () {
     const thisApp = this;
-
+    //const elements = [
+    //  document.querySelector(select.containerOf.playList.search),
+    //  document.querySelector(select.containerOf.playList.discover),
+    //  document.querySelector(select.containerOf.playList.home),
+    //];
+    
     for(let songData in thisApp.data) {
       new AudioPlayer (
         thisApp.data[songData].id,
-        thisApp.data[songData]
+        thisApp.data[songData],
+        document.querySelector(select.containerOf.playList.home)
+        //...elements
       );
     }
     thisApp.initAudioPlayer();

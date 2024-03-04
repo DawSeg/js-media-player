@@ -10,6 +10,7 @@ class SearchPage {
     thisSearchPage.data = data;
     thisSearchPage.render(element);
     thisSearchPage.filterData();
+    
   }
 
   render(element) {
@@ -33,14 +34,16 @@ class SearchPage {
       e.preventDefault();
       thisSearchPage.filteredData = thisSearchPage.data.filter(song =>
         utils.strContains(song.filename.replace(/mp3|_/g, ' '), formInput.value)
-      );
+      ); 
       if (thisSearchPage.filteredData.length === 1) {
         foundSongsHeader.textContent = `We have found ${thisSearchPage.filteredData.length} song...`;
       } else {
         foundSongsHeader.textContent = `We have found ${thisSearchPage.filteredData.length} songs...`;
       }
+      thisSearchPage.clearPlaylist();
+      thisSearchPage.initPlaylist();
     });
-    thisSearchPage.initPlaylist();
+
   }
 
   initAudioPlayer () {
@@ -48,23 +51,28 @@ class SearchPage {
 
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
-      selector: '.search-song',
+      selector: '.player',
       stopOthersOnPlay: true
     });
   }
 
-  initPlaylist() {
+  initPlaylist () {
     const thisSearchPage = this;
 
-    for (let songData in thisSearchPage.filteredData) {
-      new AudioPlayer(
-        thisSearchPage.filteredData[songData].id,
-        thisSearchPage.filteredData[songData]
+    for (let song in thisSearchPage.filteredData) {
+      new AudioPlayer (
+        thisSearchPage.filteredData[song].id,
+        thisSearchPage.filteredData[song],
+        document.querySelector(select.containerOf.playList.search)
       );
     }
     thisSearchPage.initAudioPlayer();
   }
-}
 
+  clearPlaylist() {
+    const playlistContainer = document.querySelector(select.containerOf.playList.search);
+    playlistContainer.innerHTML = '';
+  }
+}
 
 export default SearchPage;

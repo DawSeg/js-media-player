@@ -10,7 +10,6 @@ class DiscoverPage {
     thisDiscoverPage.audioPlayer = null;
     thisDiscoverPage.randomSong = null;
     thisDiscoverPage.render(element);
-    thisDiscoverPage.initAudioPlayer();
     thisDiscoverPage.getRandomSong();
   }
 
@@ -33,21 +32,19 @@ class DiscoverPage {
       thisDiscoverPage.randomSong = thisDiscoverPage.data[randomIndex];
       if (thisDiscoverPage.randomSong) {
         console.log(thisDiscoverPage.randomSong);
-        thisDiscoverPage.audioPlayer.update(thisDiscoverPage.randomSong);
-      } else {
-        console.error('Random song not selected yet.');
       }
     });
   }
 
-  initAudioPlayer() {
-    const thisDiscoverPage = this;
-
-    // eslint-disable-next-line no-undef
-    new GreenAudioPlayer('.random-song');
-    thisDiscoverPage.audioPlayer = new AudioPlayer(
-      thisDiscoverPage.randomSong.id, thisDiscoverPage.randomSong);
-  }
+  //initAudioPlayer() {
+  //  const thisDiscoverPage = this;
+  //
+  //  // eslint-disable-next-line no-undef
+  //  new GreenAudioPlayer('.player');
+  //  thisDiscoverPage.audioPlayer = new AudioPlayer(
+  //    thisDiscoverPage.randomSong.id, thisDiscoverPage.randomSong, document.querySelector(
+  //      select.containerOf.playList.discover));
+  //}
 }
 
 export default DiscoverPage;

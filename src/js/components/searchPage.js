@@ -51,7 +51,7 @@ class SearchPage {
 
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({
-      selector: '.player',
+      selector: '.search-song .player',
       stopOthersOnPlay: true
     });
   }

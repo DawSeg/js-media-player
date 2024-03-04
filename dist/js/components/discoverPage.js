@@ -36,15 +36,8 @@ class DiscoverPage {
     });
   }
 
-  //initAudioPlayer() {
-  //  const thisDiscoverPage = this;
-  //
-  //  // eslint-disable-next-line no-undef
-  //  new GreenAudioPlayer('.player');
-  //  thisDiscoverPage.audioPlayer = new AudioPlayer(
-  //    thisDiscoverPage.randomSong.id, thisDiscoverPage.randomSong, document.querySelector(
-  //      select.containerOf.playList.discover));
-  //}
+
+  
 }
 
 export default DiscoverPage;

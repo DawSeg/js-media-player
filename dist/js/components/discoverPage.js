@@ -31,13 +31,38 @@ class DiscoverPage {
       const randomIndex = Math.floor(Math.random() * thisDiscoverPage.data.length);
       thisDiscoverPage.randomSong = thisDiscoverPage.data[randomIndex];
       if (thisDiscoverPage.randomSong) {
-        console.log(thisDiscoverPage.randomSong);
+        console.log(this.randomSong);
       }
+      thisDiscoverPage.clearPlaylist();
+      thisDiscoverPage.initPlaylist();
     });
   }
 
+  initAudioPlayer () {
+    const thisDiscoverPage = this;
 
-  
+    // eslint-disable-next-line no-undef
+    GreenAudioPlayer.init({
+      selector: '.random-song .player',
+      stopOthersOnPlay: true
+    });
+  }
+
+  initPlaylist () {
+    const thisDiscoverPage = this;
+
+    new AudioPlayer (
+      thisDiscoverPage.randomSong.id,
+      thisDiscoverPage.randomSong,
+      document.querySelector(select.containerOf.playList.discover)
+    );
+    thisDiscoverPage.initAudioPlayer();
+  }
+
+  clearPlaylist() {
+    const playlistContainer = document.querySelector(select.containerOf.playList.discover);
+    playlistContainer.innerHTML = '';
+  }
 }
 
 export default DiscoverPage;

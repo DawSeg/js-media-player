@@ -110,3 +110,13 @@
     }
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .song-name {
+    top: -80%;
+  }
+  .green-audio-player {
+    height: 50px !important;
+   margin-bottom: 100px;
+  }
+}

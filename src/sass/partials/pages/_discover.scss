@@ -13,23 +13,12 @@
     letter-spacing: 5px;
     margin-bottom: 72px;
   }
-
-  .random-song {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    margin-top: 180px;
-    margin-bottom: 200px;
-  }
 }
 
 @media (max-width: 768px) {
   .discover-page {
-   position: relative;
+    position: relative;
 
-   .green-audio-player {
-    margin: 0 0 120px 0;
-   }
     .discover-page-header {
       font-size: 36px;
       letter-spacing: 6px;
@@ -37,8 +26,8 @@
     }
 
     h3 {
+      margin: 0;
       font-size: 21px;
     }
   }
-  
 }

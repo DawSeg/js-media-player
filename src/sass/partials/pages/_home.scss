@@ -88,6 +88,7 @@
     height: 700px;
 
     .subscribe-button {
+      z-index: 1;
       top: 75%;
       padding: 20px;
       font-size: 24px;
@@ -104,6 +105,7 @@
         object-fit: cover;
       }
     }
+
     .subscribe-header {
       font-size: 42px;
       top: -8%;
@@ -112,7 +114,6 @@
     }
 
     .artist {
-
       .artist-name {
         font-size: 36px;
         letter-spacing: 7px;
@@ -145,6 +146,7 @@
     height: 700px;
 
     .subscribe-button {
+      z-index: 1;
       top: 80%;
       padding: 20px;
       font-size: 24px;
@@ -161,6 +163,7 @@
         object-fit: cover;
       }
     }
+
     .subscribe-header {
       font-size: 42px;
       top: -8%;

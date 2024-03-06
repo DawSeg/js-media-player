@@ -6,12 +6,12 @@ class AudioPlayer {
     const thisAudioPlayer = this;
     thisAudioPlayer.id = id;
     thisAudioPlayer.data = data;
+    thisAudioPlayer.categories = thisAudioPlayer.data.categories;
     thisAudioPlayer.renderPlayList(element);
   }
 
   renderPlayList(element) {
     const thisAudioPlayer = this;
-
     const generatedHTML = templates.audioPlayer(thisAudioPlayer.data);
     thisAudioPlayer.element = utils.createDOMFromHTML(generatedHTML);
     element.appendChild(thisAudioPlayer.element);

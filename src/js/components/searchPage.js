@@ -47,7 +47,6 @@ class SearchPage {
   }
 
   initAudioPlayer () {
-    const thisSearchPage = this;
 
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({

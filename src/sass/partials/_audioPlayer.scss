@@ -20,7 +20,6 @@
   }
 
   .volume__button {
-
     &.open {
       path {
         fill: $color-red !important;
@@ -50,6 +49,15 @@
   font-weight: 400;
   letter-spacing: 2px;
   white-space: nowrap;
+
+  a {
+    text-decoration: none;
+    color: $color-grey;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
 }
 
 .song-ranking {
@@ -71,8 +79,11 @@
   letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
+.active {
+  color: $color-light;
+}
 
+@media (max-width: 768px) {
   .song-name {
     max-width: 100%;
     text-overflow: ellipsis;
@@ -115,8 +126,9 @@
   .song-name {
     top: -80%;
   }
+
   .green-audio-player {
     height: 50px !important;
-   margin-bottom: 100px;
+    margin-bottom: 100px;
   }
 }

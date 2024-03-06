@@ -16,7 +16,6 @@ class HomePage {
     thisHomePage.dom.wrapper = element;
     thisHomePage.dom.wrapper.innerHTML = generatedHTML;
     thisHomePage.element = utils.createDOMFromHTML(generatedHTML);
-
   }
 }
 

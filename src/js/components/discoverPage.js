@@ -39,7 +39,6 @@ class DiscoverPage {
   }
 
   initAudioPlayer () {
-    const thisDiscoverPage = this;
 
     // eslint-disable-next-line no-undef
     GreenAudioPlayer.init({

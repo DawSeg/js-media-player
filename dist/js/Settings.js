@@ -23,6 +23,8 @@ export const select = {
       search: '.search-song',
       discover: '.random-song',
     },
+    categories: '.categories',
+    homeCategories: '.home-categories',
   },
   classNames: {
     active: 'active',

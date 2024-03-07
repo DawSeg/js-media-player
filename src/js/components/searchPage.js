@@ -21,6 +21,10 @@ class SearchPage {
     thisSearchPage.dom.wrapper = element;
     thisSearchPage.dom.wrapper.innerHTML = generatedHTML;
     thisSearchPage.element = utils.createDOMFromHTML(generatedHTML);
+
+    utils.capitalizeFirstLetterInElement('.search-page-header');
+    utils.capitalizeFirstLetterInElement('.search-form p');
+    utils.capitalizeFirstLetterInElement('.search-button');
   }
 
   filterData() {

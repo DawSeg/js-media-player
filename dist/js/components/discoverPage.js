@@ -21,6 +21,9 @@ class DiscoverPage {
     thisDiscoverPage.dom.wrapper = element;
     thisDiscoverPage.dom.wrapper.innerHTML = generatedHTML;
     thisDiscoverPage.element = utils.createDOMFromHTML(generatedHTML);
+
+    utils.capitalizeFirstLetterInElement('.discover-page-header');
+    utils.capitalizeFirstLetterInElement('.discover-page h3');
   }
 
   getRandomSong() {

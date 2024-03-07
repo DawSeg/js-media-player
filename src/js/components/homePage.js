@@ -16,6 +16,14 @@ class HomePage {
     thisHomePage.dom.wrapper = element;
     thisHomePage.dom.wrapper.innerHTML = generatedHTML;
     thisHomePage.element = utils.createDOMFromHTML(generatedHTML);
+
+    utils.capitalizeFirstLetterInElement('.artist-name-top p');
+    utils.capitalizeFirstLetterInElement('.subscribe-button');
+    
+    const header = document.querySelector('.subscribe-header');
+    let text = header.textContent;
+    text = text.toUpperCase();
+    header.textContent = text;
   }
 }
 

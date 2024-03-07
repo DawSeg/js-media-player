@@ -36,6 +36,7 @@
     top: -17%;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
   }
 }
 
@@ -111,6 +112,7 @@
       top: -8%;
       line-height: 45px;
       letter-spacing: 12px;
+      white-space: normal
     }
 
     .artist {

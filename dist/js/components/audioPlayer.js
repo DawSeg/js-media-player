@@ -18,7 +18,7 @@ class AudioPlayer {
 
     let categoriesElements = document.querySelectorAll('.categories');
     categoriesElements.forEach(function(element) {
-      let categoriesText = element.textContent;
+      let categoriesText = element.textContent.trim();
       let modifiedCategoriesText = categoriesText.charAt(0).toUpperCase() + categoriesText.slice(1);
       let categoriesArray = modifiedCategoriesText.split(',');
       let formattedCategories = categoriesArray.map(category => category.trim()).join(', ');
